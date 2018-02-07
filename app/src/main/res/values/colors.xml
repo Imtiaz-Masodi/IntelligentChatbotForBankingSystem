@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorSemiTranaparent">#3000</color>
+    <color name="colorClientMessageBG">#50000000</color>
+    <color name="colorServerMessageBG">#80FFFFFF</color>
+    <color name="colorNewChatDateBG">#70dc9b55</color>
+    <color name="colorSelectedMessage">#7064ceff</color>
+</resources>
