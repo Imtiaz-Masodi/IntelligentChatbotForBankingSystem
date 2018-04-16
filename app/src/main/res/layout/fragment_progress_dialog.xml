@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/index_bg"
+    android:padding="16dp"
+    tools:context="com.icfbs.ProgressDialog">
+
+
+    <TextView
+        android:id="@+id/progressTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="6dp"
+        android:paddingTop="6dp"
+        android:text="Title goes here"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/progressTitle"
+        android:layout_below="@+id/progressTitle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/progressTitle"
+            android:indeterminateTint="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/progressMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/progressBar"
+            android:layout_below="@+id/progressTitle"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/progressBar"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Progress stauts"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
+</RelativeLayout>

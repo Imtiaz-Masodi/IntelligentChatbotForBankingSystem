@@ -1,12 +1,14 @@
 package com.icfbs.expandablelist;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.icfbs.IndexActivity;
 import com.icfbs.R;
 
 import java.util.ArrayList;
@@ -66,7 +68,9 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.expandable_list_header,null);
         }
-        ((TextView)view.findViewById(R.id.tvExpandableListHeader)).setText(header.getHeaderData());
+        TextView headerText = view.findViewById(R.id.tvExpandableListHeader);
+        headerText.setText(header.getHeaderData());
+        headerText.setTypeface(Typeface.createFromAsset(context.getAssets(), IndexActivity.CUSTOM_FONTS[0]));
         return view;
     }
 
@@ -77,7 +81,9 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.expandable_list_child,null);
         }
-        ((TextView)view.findViewById(R.id.tvExpandableListChild)).setText(child.getChildData());
+        TextView childText = view.findViewById(R.id.tvExpandableListChild);
+        childText.setText(child.getChildData());
+        childText.setTypeface(Typeface.createFromAsset(context.getAssets(), IndexActivity.CUSTOM_FONTS[0]));
         return view;
     }
 

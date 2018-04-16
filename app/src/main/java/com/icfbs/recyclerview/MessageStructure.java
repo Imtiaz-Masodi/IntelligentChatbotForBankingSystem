@@ -6,13 +6,14 @@ package com.icfbs.recyclerview;
 
 import com.icfbs.expandablelist.ExpandableListHeader;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MessageStructure {
+public class MessageStructure implements Serializable {
     public String message, date = null;
     public long timeInMillis;
     public boolean isClient = true, isNewChat = false;
-    public boolean isListMessage = false;
+    public boolean isListMessage = false, isLinkedMessage = false;
     public List<ExpandableListHeader> messageList = null;
 
     public MessageStructure(String message, String date, long timeInMillis, boolean isClient, boolean isNewChat) {
@@ -23,11 +24,20 @@ public class MessageStructure {
         this.isNewChat = isNewChat;
     }
 
-    public MessageStructure(List<ExpandableListHeader> messageList, boolean isListMessage, String date, long timeInMillis) {
-        isClient = false;
+    public MessageStructure(String message, List<ExpandableListHeader> messageList, boolean isListMessage, String date, long timeInMillis) {
+        this.message = message;
+        this.isClient = false;
         this.messageList = messageList;
         this.isListMessage = isListMessage;
         this.date = date;
         this.timeInMillis = timeInMillis;
+    }
+
+    public MessageStructure(String message, boolean isLinkedMessage, String date, long timeInMillis) {
+        this.message = message;
+        this.isLinkedMessage = isLinkedMessage;
+        this.date = date;
+        this.timeInMillis = timeInMillis;
+        isClient = false;
     }
 }

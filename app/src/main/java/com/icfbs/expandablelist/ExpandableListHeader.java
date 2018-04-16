@@ -4,9 +4,10 @@ package com.icfbs.expandablelist;
  * Created by MOHD IMTIAZ on 27-Jan-18.
  */
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ExpandableListHeader {
+public class ExpandableListHeader implements Serializable {
     private String headerData;
     private List<ExpandableListChild> childList;
 
@@ -29,5 +30,10 @@ public class ExpandableListHeader {
 
     public void setChildList(List<ExpandableListChild> childList) {
         this.childList = childList;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

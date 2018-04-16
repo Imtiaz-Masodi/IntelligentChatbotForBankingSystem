@@ -1,56 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    android:fitsSystemWindows="true"
     tools:context="com.icfbs.HomeActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="4dp"
-        android:background="@drawable/compose_layout_bg"
-        android:orientation="horizontal">
+        android:background="@drawable/index_bg"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <EditText
-            android:id="@+id/etMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/compose_msg_bg"
-            android:defaultFocusHighlightEnabled="false"
-            android:hint="Type a Message"
-            android:inputType="text|textMultiLine|textCapSentences"
-            android:maxLines="6"
-            android:minHeight="40dp"
-            android:textColor="@android:color/background_light"
-            android:textColorHint="#999"
-            android:textSize="16sp" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="24dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
-        <Button
-            android:id="@+id/bSend"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/ic_btn_speak_now"
-            android:defaultFocusHighlightEnabled="true"
-            android:focusable="auto" />
-    </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvMessages"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/linearLayout"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:paddingTop="?attr/actionBarSize" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/compose_layout_bg"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/compose_msg_bg"
+                android:focusable="auto"
+                android:gravity="center_vertical"
+                android:hint="Type a Message"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:maxLines="6"
+                android:minHeight="40dp"
+                android:textColor="@android:color/background_light"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/bSend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/ic_mic"
+                android:backgroundTint="@color/colorTextHint"
+                android:defaultFocusHighlightEnabled="true"
+                android:focusable="auto"
+                android:padding="8dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/indexAnimLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index_bg"
+    tools:context="com.icfbs.IndexActivity">
+
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"
+        android:text="SBI Bot"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/background_light"
+        android:textSize="44dp" />
+
+    <LinearLayout
+        android:id="@+id/fragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llIndexBottom"
+        android:layout_below="@id/tvLogo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llIndexBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorSemiTranaparent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Don't have an account? Sign up."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/background_light"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorSemiTranaparent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Already have an account. Login!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/background_light"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvChangeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorSemiTranaparent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Not yours Email? Change Email ID."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/background_light"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvBackToLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorSemiTranaparent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Back to Login Page"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/background_light"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

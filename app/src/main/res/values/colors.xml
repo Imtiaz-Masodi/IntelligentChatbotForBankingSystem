@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorSemiTranaparent">#3000</color>
+    <!--<color name="colorPrimary">#3f51b5</color>-->
+    <color name="colorPrimary">#352f71</color>
+    <color name="colorPrimaryDark">#FF252058</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorTextHint">#f1f1f1</color>
+    <color name="colorSemiTranaparent">#33000000</color>
     <color name="colorClientMessageBG">#50000000</color>
     <color name="colorServerMessageBG">#80FFFFFF</color>
     <color name="colorNewChatDateBG">#70dc9b55</color>
     <color name="colorSelectedMessage">#7064ceff</color>
+
+    <!--<color name="colorGradientS">#8d51a1</color>
+    <color name="colorGradientM">#b25093</color>
+    <color name="colorGradientE">#c8486d</color>-->
+
+    <color name="colorRipple">#FFF</color>
+    <color name="colorGradientS">#352f71</color>
+    <color name="colorGradientM">#71265e</color>
+    <color name="colorGradientE">#833626</color>
+
+    <color name="colorLoginET">#30dadada</color>
 </resources>
